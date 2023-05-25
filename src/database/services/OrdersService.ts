@@ -45,6 +45,7 @@ export default class OrdersService implements IOrder {
   static async getLatestOrders() {
     const foundOrders = await Orders.findAll({
       limit: 10,
+      order: [["id", "DESC"]],
     });
 
     if (foundOrders.length === 0) {
