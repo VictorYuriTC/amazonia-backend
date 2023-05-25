@@ -1,4 +1,5 @@
 import express from "express";
+import LoginRouter from "./database/routers/LoginRouter";
 
 class App {
   public app: express.Express;
@@ -7,6 +8,7 @@ class App {
     this.app = express();
     this.config();
     this.app.get("/", (req, res) => res.json({ ok: true }));
+    this.app.use("/login", LoginRouter);
   }
 
   private config(): void {
