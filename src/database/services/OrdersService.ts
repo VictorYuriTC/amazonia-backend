@@ -47,7 +47,7 @@ export default class OrdersService implements IOrder {
       limit: 10,
     });
 
-    if (!foundOrders) {
+    if (foundOrders.length === 0) {
       return { message: "No orders found", status: 401 };
     }
 
