@@ -5,7 +5,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 12345678
-      MYSQL_DATABASE: amazonia_db
+      MYSQL_DATABASE: amazoniadb
       MYSQL_USER: victorcamargo
       MYSQL_PASSWORD: 12345678
     ports:
